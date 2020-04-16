@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module2", "TPModule2\TP1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule3", "TPModule3\TPModule3.csproj", "{E22A0DDE-8ED8-48EF-B2F3-B2D49991BC63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module5LesChats", "TP1Module5LesChats\TP1Module5LesChats.csproj", "{72544B23-F159-4400-B60D-E61A154BD2C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E22A0DDE-8ED8-48EF-B2F3-B2D49991BC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E22A0DDE-8ED8-48EF-B2F3-B2D49991BC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E22A0DDE-8ED8-48EF-B2F3-B2D49991BC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72544B23-F159-4400-B60D-E61A154BD2C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72544B23-F159-4400-B60D-E61A154BD2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72544B23-F159-4400-B60D-E61A154BD2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72544B23-F159-4400-B60D-E61A154BD2C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
