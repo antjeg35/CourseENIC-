@@ -1,0 +1,29 @@
+﻿@using TP2Module5LesPizzas.Helpers
+@model TP2Module5LesPizzas.Models.PizzaVM
+
+<h2>Editer votre pizza</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    @Html.Partial("_PizzaCreateEdit", Model)
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.CustomSubmit("Submit", "Save")
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

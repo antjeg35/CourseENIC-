@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{72544B23-F159-4400-B60D-E61A154BD2C6}</ProjectGuid>
+    <ProjectGuid>{ABFC578B-98C2-4F53-AFBA-DD7C7AAF09A5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TP1Module5LesChats</RootNamespace>
-    <AssemblyName>TP1Module5LesChats</AssemblyName>
+    <RootNamespace>TP2Module5LesPizzas</RootNamespace>
+    <AssemblyName>TP2Module5LesPizzas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -120,13 +120,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PizzaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Chat.cs" />
-    <Compile Include="Models\Data.cs" />
+    <Compile Include="Helpers\CustomSubmit.cs" />
+    <Compile Include="Models\PizzaVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,14 +165,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Chat\Index.cshtml" />
-    <Content Include="Views\Chat\Delete.cshtml" />
-    <Content Include="Views\Chat\Details.cshtml" />
-    <Content Include="Views\Chat\_ChatDetails.cshtml" />
-    <Content Include="Views\Chat\Edit.cshtml" />
+    <Content Include="Views\Pizza\Delete.cshtml" />
+    <Content Include="Views\Pizza\Details.cshtml" />
+    <Content Include="Views\Pizza\Create.cshtml" />
+    <Content Include="Views\Pizza\Index.cshtml" />
+    <Content Include="Views\Pizza\Edit.cshtml" />
+    <Content Include="Views\Pizza\_PizzaCreateEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PizzaBis\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -186,6 +188,12 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TP2Module5BOLesPizzas\TP2Module5BOLesPizzas.csproj">
+      <Project>{6066eaaa-6025-49bc-a1f3-fc6447c42cd9}</Project>
+      <Name>TP2Module5BOLesPizzas</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -203,9 +211,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55020</DevelopmentServerPort>
+          <DevelopmentServerPort>56753</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55020/</IISUrl>
+          <IISUrl>http://localhost:56753/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
