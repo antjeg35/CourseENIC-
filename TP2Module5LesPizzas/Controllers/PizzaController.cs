@@ -68,21 +68,31 @@ namespace TP2Module5LesPizzas.Controllers
         [HttpPost]
         public ActionResult Create(PizzaVM pizzaVM)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
+                if (ModelState.IsValid)
                 {
-
+                    if (dataInstance.listePizzas.Any(p => p.Nom.ToUpper() == pizzaVM.Pizza.Nom.ToUpper()))
+                    {
+                        ModelState.AddModelError("", "Il existe déjà une pizza portant ce nom");
+                        pizzaVM.Ingredients = dataInstance.listeIngredients.ToList();
+                        pizzaVM.Pates = dataInstance.listePates.ToList();
+                        return View(pizzaVM);
+                    }
                     dataInstance.listePizzas.Add(savePizza(pizzaVM));
-
                     return RedirectToAction("Index");
+                    
                 }
-                catch (Exception)
-                {
-                    return View(pizzaVM);
-                }
+                pizzaVM.Ingredients = dataInstance.listeIngredients.ToList();
+                pizzaVM.Pates = dataInstance.listePates.ToList();
+                return View(pizzaVM);
             }
-            return View(pizzaVM);
+            catch
+            {
+                pizzaVM.Ingredients = dataInstance.listeIngredients.ToList();
+                pizzaVM.Pates = dataInstance.listePates.ToList();
+                return View(pizzaVM);
+            }
         }
 
         // GET: Pizza/Edit/5

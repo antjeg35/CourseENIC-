@@ -2,7 +2,7 @@
 
 <h4>Pizza</h4>
 <hr />
-@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
 <div class="form-group">
     @Html.LabelFor(model => model.Pizza.Nom, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
@@ -14,8 +14,8 @@
 <div class="form-group">
     @Html.LabelFor(model => model.Pizza.Pate, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
-        @Html.DropDownListFor(model => model.IdPate, new SelectList(Model.Pates, "Id", "Nom"), new { style = "form-control" })
-        @Html.ValidationMessageFor(model => model.Pizza.Pate, "", new { @class = "text-danger" })
+        @Html.DropDownListFor(model => model.IdPate, new SelectList(Model.Pates, "Id", "Nom"), string.Empty, new { style = "form-control" })
+        @Html.ValidationMessageFor(model => model.IdPate, "", new { @class = "text-danger" })
     </div>
 </div>
 
@@ -23,7 +23,7 @@
     @Html.LabelFor(model => model.Pizza.Ingredients, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
         @Html.ListBoxFor(model => model.IdSelectionIngredients, new MultiSelectList((Model.Ingredients), "Id", "Nom"), new { style = "form-control" })
-        @Html.ValidationMessageFor(model => model.Pizza.Pate, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.IdSelectionIngredients, "", new { @class = "text-danger" })
     </div>
 </div>
 

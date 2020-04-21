@@ -126,6 +126,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CustomSubmit.cs" />
+    <Compile Include="Helpers\ListValidation.cs" />
     <Compile Include="Models\PizzaVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
