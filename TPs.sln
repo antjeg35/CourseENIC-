@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2Module5LesPizzas", "TP2M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2Module5BOLesPizzas", "TP2Module5BOLesPizzas\TP2Module5BOLesPizzas.csproj", "{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkDojo", "TP1Module6EntityFrameworkDojo\TP1Module6EntityFrameworkDojo.csproj", "{5EC6F5DF-39E3-4378-B2FD-ED72A76468D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkBODojo", "TP1Module6EntityFrameworkBODojo\TP1Module6EntityFrameworkBODojo.csproj", "{0BBA0441-0AB7-4112-946B-521C9CEC7367}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6066EAAA-6025-49BC-A1F3-FC6447C42CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC6F5DF-39E3-4378-B2FD-ED72A76468D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC6F5DF-39E3-4378-B2FD-ED72A76468D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC6F5DF-39E3-4378-B2FD-ED72A76468D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC6F5DF-39E3-4378-B2FD-ED72A76468D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

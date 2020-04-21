@@ -1,5 +1,4 @@
-﻿
-namespace TP2Module5BOLesPizzas
+﻿namespace TP2Module5BOLesPizzas
 {
     public class Ingredient
     {
