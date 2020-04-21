@@ -159,9 +159,16 @@ namespace TP1Module6EntityFrameworkDojo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Samourai samourai = db.Samourais.Find(id);
-            db.Samourais.Remove(samourai);
+            Samourai samouraiASupprimer = db.Samourais.Find(id);
+            int IdArmeASupprimer = samouraiASupprimer.Arme.Id;
+            db.Samourais.Remove(samouraiASupprimer);
             db.SaveChanges();
+            if (!db.Samourais.Any(s => s.Arme.Id == IdArmeASupprimer))
+            {
+                Arme armeASupprimer = db.Armes.Find(IdArmeASupprimer);
+                db.Armes.Remove(armeASupprimer);
+                db.SaveChanges();
+            }           
             return RedirectToAction("Index");
         }
 
