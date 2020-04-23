@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkDo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkBODojo", "TP1Module6EntityFrameworkBODojo\TP1Module6EntityFrameworkBODojo.csproj", "{0BBA0441-0AB7-4112-946B-521C9CEC7367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkBODojoPart2", "TP1Module6EntityFrameworkBODojoPart2\TP1Module6EntityFrameworkBODojoPart2.csproj", "{B9339C35-8637-451E-8B6C-A72F87A88720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1Module6EntityFrameworkDojoPart2", "TP1Module6EntityFrameworkDojoPart2\TP1Module6EntityFrameworkDojoPart2.csproj", "{A82B1006-8ED7-47F1-8FAD-D2E697619E6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBA0441-0AB7-4112-946B-521C9CEC7367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9339C35-8637-451E-8B6C-A72F87A88720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9339C35-8637-451E-8B6C-A72F87A88720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9339C35-8637-451E-8B6C-A72F87A88720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9339C35-8637-451E-8B6C-A72F87A88720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A82B1006-8ED7-47F1-8FAD-D2E697619E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82B1006-8ED7-47F1-8FAD-D2E697619E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82B1006-8ED7-47F1-8FAD-D2E697619E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82B1006-8ED7-47F1-8FAD-D2E697619E6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

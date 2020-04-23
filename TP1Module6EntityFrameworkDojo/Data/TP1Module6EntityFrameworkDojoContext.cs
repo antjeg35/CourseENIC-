@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using TP1Module6EntityFrameworkBODojoPart2;
 
-namespace TP1Module6EntityFrameworkDojo.Data
+namespace TP1Module6EntityFrameworkDojoPart2.Data
 {
     public class TP1Module6EntityFrameworkDojoContext : DbContext
     {
@@ -18,9 +19,8 @@ namespace TP1Module6EntityFrameworkDojo.Data
         public TP1Module6EntityFrameworkDojoContext() : base("name=TP1Module6EntityFrameworkDojoContext")
         {
         }
+        public System.Data.Entity.DbSet<TP1Module6EntityFrameworkBODojoPart2.Samourai> Samourais { get; set; }
 
-        public System.Data.Entity.DbSet<TP1Module6EntityFrameworkBODojo.Samourai> Samourais { get; set; }
-
-        public System.Data.Entity.DbSet<TP1Module6EntityFrameworkBODojo.Arme> Armes { get; set; }
+        public System.Data.Entity.DbSet<TP1Module6EntityFrameworkBODojoPart2.Arme> Armes { get; set; }
     }
 }

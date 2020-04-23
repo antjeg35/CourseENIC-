@@ -5,14 +5,14 @@ namespace TP1Module6EntityFrameworkDojo.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TP1Module6EntityFrameworkDojo.Data.TP1Module6EntityFrameworkDojoContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TP1Module6EntityFrameworkDojoPart2.Data.TP1Module6EntityFrameworkDojoContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(TP1Module6EntityFrameworkDojo.Data.TP1Module6EntityFrameworkDojoContext context)
+        protected override void Seed(TP1Module6EntityFrameworkDojoPart2.Data.TP1Module6EntityFrameworkDojoContext context)
         {
             //  This method will be called after migrating to the latest version.
 

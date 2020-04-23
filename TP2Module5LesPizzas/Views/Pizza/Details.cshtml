@@ -25,10 +25,15 @@
         <dt>
             @Html.DisplayNameFor(model => model.Ingredients)
         </dt>
-        @foreach (var ingredient in Model.Ingredients)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtMartials)
+        </dt>
+
+        @foreach (var artMartial in Model.ArtMartials)
         {
             <dd>
-                @Html.DisplayFor(m => ingredient.Nom)<br />
+                @Html.DisplayFor(m => artMartial.Nom)<br />
             </dd>
         }
 

@@ -1,4 +1,4 @@
-﻿namespace TP1Module6EntityFrameworkBODojo
+﻿namespace TP1Module6EntityFrameworkBODojoPart2
 {
     public class Samourai
     {

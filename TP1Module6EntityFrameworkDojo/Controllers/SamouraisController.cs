@@ -6,11 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using TP1Module6EntityFrameworkBODojo;
-using TP1Module6EntityFrameworkDojo.Data;
-using TP1Module6EntityFrameworkDojo.Models;
+using TP1Module6EntityFrameworkBODojoPart2;
+using TP1Module6EntityFrameworkDojoPart2.Data;
+using TP1Module6EntityFrameworkDojoPart2.Models;
 
-namespace TP1Module6EntityFrameworkDojo.Controllers
+namespace TP1Module6EntityFrameworkDojoPart2.Controllers
 {
     public class SamouraisController : Controller
     {
@@ -114,17 +114,37 @@ namespace TP1Module6EntityFrameworkDojo.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Samourai samourai = db.Samourais.Find(samouraiVM.Samourai.Id);
+                    Samourai samourai = db.Samourais.Include(x => x.Arme).FirstOrDefault(x => x.Id == samouraiVM.Samourai.Id);
                     samourai.Nom = samouraiVM.Samourai.Nom;
                     samourai.Force = samouraiVM.Samourai.Force;
-                    if(samouraiVM.IdArme == null)
+                    if (samouraiVM.IdArme != null)
                     {
-                        samourai.Arme = null;
+                        samourai.Arme = db.Armes.FirstOrDefault(x => x.Id == samouraiVM.IdArme);
+                        /*samouraisAvecMonArme = db.Samourais.Where(x => x.Arme.Id == samouraiVM.IdArme).ToList();
+
+                        Arme arme = null;
+                        foreach (var item in samouraisAvecMonArme)
+                        {
+                            arme = item.Arme;
+                            item.Arme = null;
+                            db.Entry(item).State = EntityState.Modified;
+                        }
+
+                        if (arme == null)
+                        {
+                            currentSamourai.Arme = db.Armes.FirstOrDefault(x => x.Id == samouraiVM.IdArme);
+                        }
+                        else
+                        {
+                            currentSamourai.Arme = arme;
+                        }*/
                     }
                     else
                     {
-                        samourai.Arme = db.Armes.FirstOrDefault(a => a.Id == samouraiVM.IdArme);
+                        samourai.Arme = null;
                     }
+
+                    db.Entry(samourai).State = EntityState.Modified;
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
@@ -160,15 +180,9 @@ namespace TP1Module6EntityFrameworkDojo.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Samourai samouraiASupprimer = db.Samourais.Find(id);
-            int IdArmeASupprimer = samouraiASupprimer.Arme.Id;
             db.Samourais.Remove(samouraiASupprimer);
             db.SaveChanges();
-            if (!db.Samourais.Any(s => s.Arme.Id == IdArmeASupprimer))
-            {
-                Arme armeASupprimer = db.Armes.Find(IdArmeASupprimer);
-                db.Armes.Remove(armeASupprimer);
-                db.SaveChanges();
-            }           
+                 
             return RedirectToAction("Index");
         }
 

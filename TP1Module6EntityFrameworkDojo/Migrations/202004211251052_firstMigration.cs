@@ -1,4 +1,4 @@
-namespace TP1Module6EntityFrameworkDojo.Migrations
+namespace TP1Module6EntityFrameworkDojoPart2.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

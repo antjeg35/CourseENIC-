@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using TP1Module6EntityFrameworkBODojo;
-using TP1Module6EntityFrameworkDojo.Data;
+using TP1Module6EntityFrameworkBODojoPart2;
+using TP1Module6EntityFrameworkDojoPart2.Data;
 
-namespace TP1Module6EntityFrameworkDojo.Controllers
+namespace TP1Module6EntityFrameworkDojoPart2.Controllers
 {
     public class ArmesController : Controller
     {

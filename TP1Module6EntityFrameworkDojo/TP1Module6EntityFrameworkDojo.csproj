@@ -137,6 +137,10 @@
     <Compile Include="Migrations\202004211251052_firstMigration.Designer.cs">
       <DependentUpon>202004211251052_firstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004221342244_first.cs" />
+    <Compile Include="Migrations\202004221342244_first.Designer.cs">
+      <DependentUpon>202004221342244_first.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SamouraiViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +217,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004211251052_firstMigration.resx">
       <DependentUpon>202004211251052_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004221342244_first.resx">
+      <DependentUpon>202004221342244_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
