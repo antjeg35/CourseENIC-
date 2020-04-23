@@ -131,7 +131,8 @@ namespace TP1Module6EntityFrameworkDojoPart2.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Samourai samourai = db.Samourais.Include(x => x.Arme).Include(x=>x.ArtMartials).FirstOrDefault(x => x.Id == samouraiVM.Samourai.Id);
+                    Samourai samourai = db.Samourais.Find(samouraiVM.Samourai.Id);
+                    /*Samourai samourai = db.Samourais.Include(x => x.Arme).Include(x=>x.ArtMartials).FirstOrDefault(x => x.Id == samouraiVM.Samourai.Id);*/
                     samourai.Nom = samouraiVM.Samourai.Nom;
                     samourai.Force = samouraiVM.Samourai.Force;
                     samourai.Arme = null;
